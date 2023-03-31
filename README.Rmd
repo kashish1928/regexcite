@@ -76,6 +76,7 @@ str_split_one(y, pattern = stringr::fixed("."))
 library(regexcite)
 
 my_add(10)
+my_add(5,2)
 ```
 
 Now, in case you enter NA, it'll return NA.

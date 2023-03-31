@@ -87,6 +87,8 @@ library(regexcite)
 
 my_add(10)
 #> [1] 20
+my_add(5,2)
+#> [1] 7
 ```
 
 Now, in case you enter NA, it’ll return NA. Also for safety it’ll give
