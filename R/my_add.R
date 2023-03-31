@@ -16,5 +16,11 @@
 #'
 #' @export
 my_add <- function(x, y = 10) {
-  x + y
+  if (is.na(x) || is.na(y)) {
+    return(NA)
+  } else if (!is.numeric(x) || !is.numeric(y)) {
+    return("One of your inputs is a string")
+  } else {
+    return(x + y)
+  }
 }
