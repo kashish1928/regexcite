@@ -22,3 +22,8 @@ test_that("my_add function returns NA when y is NA", {
 test_that("my_add function cannot handle string values", {
   expect_equal(my_add("5", "10"), "One of your inputs is a string")
 })
+
+# Test 6: Test for negative values
+test_that("my_add function can handle negative values", {
+  expect_equal(my_add(-5, -5), -10)
+})
