@@ -30,6 +30,8 @@ devtools::install_github("jennybc/regexcite")
 
 ## Usage
 
+### 1. str_split_one
+
 A fairly common task when dealing with strings is the need to split a
 single string into many parts. This is what `base::strplit()` and
 `stringr::str_split()` do.
@@ -72,4 +74,29 @@ str_split_one(x, pattern = ",", n = 2)
 y <- "192.168.0.1"
 str_split_one(y, pattern = stringr::fixed("."))
 #> [1] "192" "168" "0"   "1"
+```
+
+### 2. my_add
+
+`my_add()` is a function that takes two numeric values as input and
+returns their sum. It has a default value of 10 for the second input, so
+in case only one paraemter is included it’ll add 10 to that parameter.
+
+``` r
+library(regexcite)
+
+my_add(10)
+#> [1] 20
+```
+
+Now, in case you enter NA, it’ll return NA. Also for safety it’ll give
+an error if one of the inputs is a string.
+
+``` r
+library(regexcite)
+
+my_add(NA)
+#> [1] NA
+my_add("one")
+#> [1] "One of your inputs is a string"
 ```
